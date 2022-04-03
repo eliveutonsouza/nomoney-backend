@@ -5,7 +5,8 @@ import { StatusController } from "./status/controller/status.controller";
 const Router = RouterExpress();
 
 Router.get("/status", (req: Request, res: Response) => {
-    return StatusController.getStatus();
+    // Returning the responsess
+    return StatusController.getStatus(res, req);
 });
 
 export { Router };

@@ -1,0 +1,32 @@
+version: '3.1'
+
+services:
+    app:
+        build: .
+        container_name: con_app_node
+        ports:
+            - 3334:3334
+        volumes:
+            - .:/usr/app
+    
+
+    db:
+        container_name: con_dbpg
+        image: postgres
+        restart: always
+        volumes:
+            - .:/usr/app/pg/var/lib/postgresql/data
+        environment:
+            POSTGRES_USER: root
+            POSTGRES_PASSWORD: dev
+            POSTGRES_DB: nomoneydb
+        ports:
+            - 5432:5432
+
+
+    adminer:
+        container_name: con_admpg
+        image: adminer
+        restart: always
+        ports:
+            - 8080:8080

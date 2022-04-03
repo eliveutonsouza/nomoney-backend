@@ -39,4 +39,9 @@ If you are using Windows Enable EditorConfig for VS Code:
 
 `https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig`
 
+After finish all configurations you can run to start the project:
 
+`yarn start:dev` or `npm run start:dev`
+
+You could run the node, postgres and adminer using the docker file.
+To run the docker file is easy if you have the docker and docker-compose installed.
