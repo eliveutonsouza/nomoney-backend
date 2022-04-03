@@ -1,0 +1,58 @@
+{
+	"components": {
+		"examples": {},
+		"headers": {},
+		"parameters": {},
+		"requestBodies": {},
+		"responses": {},
+		"schemas": {},
+		"securitySchemes": {}
+	},
+	"info": {
+		"title": "nomoney-backend",
+		"version": "1.0.0",
+		"description": "A financial planning platafrom.",
+		"license": {
+			"name": "MIT"
+		},
+		"contact": {
+			"name": "Rick Dias ",
+			"email": "rickelmegadias@gmail.com"
+		}
+	},
+	"openapi": "3.0.0",
+	"paths": {
+		"/status": {
+			"get": {
+				"operationId": "GetStatus",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"properties": {
+										"message": {
+											"type": "string"
+										}
+									},
+									"required": [
+										"message"
+									],
+									"type": "object"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": []
+			}
+		}
+	},
+	"servers": [
+		{
+			"url": "/"
+		}
+	]
+}
