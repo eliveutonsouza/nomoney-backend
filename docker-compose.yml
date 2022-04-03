@@ -1,15 +1,10 @@
+# Docker run 3 containers (Postgres, Adminer and our Application)
+
+
 version: '3.1'
 
 services:
-    app:
-        build: .
-        container_name: con_app_node
-        ports:
-            - 3334:3334
-        volumes:
-            - .:/usr/app
-    
-
+    # Creating the postgres container running on localhost:5432
     db:
         container_name: con_dbpg
         image: postgres
@@ -24,9 +19,20 @@ services:
             - 5432:5432
 
 
+    # Creating the adminer container running on localhost:8080 (the visual interface for databases)
     adminer:
         container_name: con_admpg
         image: adminer
         restart: always
         ports:
             - 8080:8080
+
+
+    # Creating the Nomoney App container running on localhost:3334
+    # app:
+    #     build: .
+    #     container_name: con_app_node
+    #     ports:
+    #         - 3334:3334
+    #     volumes:
+    #         - .:/usr/app

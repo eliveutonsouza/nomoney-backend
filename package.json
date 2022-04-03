@@ -12,14 +12,18 @@
     "start:build": "tsc",
     "predev": "npm run generate:swagger",
     "prebuild": "npm run generate:swagger",
-    "generate:swagger": "tsoa spec"
+    "generate:swagger": "tsoa spec",
+    "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js",
+    "migration:generate": "npm run typeorm migration:generate -- -n"
   },
   "dependencies": {
     "express": "^4.17.3",
     "nodemon": "^2.0.15",
+    "pg": "^8.7.3",
     "reflect-metadata": "^0.1.13",
     "swagger-ui-express": "^4.3.0",
-    "tsoa": "^3.14.1"
+    "tsoa": "^3.14.1",
+    "typeorm": "^0.2.41"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",

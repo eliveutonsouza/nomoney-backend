@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
 import { Get, Route } from "tsoa";
 
-@Route("status")
-export class StatusController {
+@Route("user")
+export class UserController {
     constructor() {
         // call services
     }

@@ -1,3 +1,7 @@
+# Docker to generate the node application
+# This docker use the node image and copy the application files to run
+
+
 FROM node
 
 
